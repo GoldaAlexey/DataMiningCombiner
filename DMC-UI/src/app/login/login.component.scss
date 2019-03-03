@@ -1,0 +1,22 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+.login-container {
+    height: 100vh;
+    background: $login-background-url 100%;
+    background-position: center;
+    position: relative;
+    .login-form {
+        position: absolute;
+        width: 370px;
+        height: 336px;
+        background: $login-form-background;
+        left: calc(50% - 185px);
+        top: calc(50% - 168px);
+        padding: 15px 30px;
+        .login-title {
+            @include setLatoFont(bold, 18px);
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+}

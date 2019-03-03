@@ -1,0 +1,20 @@
+<div class="login-container">
+    <div class="login-form">
+        <form (ngSubmit)="login(form)" #form="ngForm">
+            <div class="ui-g ui-g-nopad">
+                <div class="ui-g-12 ui-g-nopad">
+                    <h1 class="login-title" translate>DATA_MINING_COMBINER</h1>
+                </div>
+                <div class="ui-g-12 ui-g-nopad">
+                    <input pInputText type="email" name="email" [(ngModel)]="credits.email" />
+                </div>
+                <div class="ui-g-12 ui-g-nopad">
+                    <input pInputText type="password" name="password" [(ngModel)]="credits.password" />
+                </div>
+                <div class="ui-g-12 ui-g-nopad">
+                    <button pButton type="submit" label="Click"></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

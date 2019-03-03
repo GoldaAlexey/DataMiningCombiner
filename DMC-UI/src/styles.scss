@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@import './app/variables.scss';
+@import './app/mixins.scss';
+@font-face {
+    font-family: Lato;
+    src: url('assets/fonts/Lato-Regular.ttf') format("truetype");
+}
+body {
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,13 @@
+interface ITranslation {
+    EMAIL
+    PASSWORD
+    LOGIN
+    PROJECTS
+    LOG_OUT
+    NAME
+    DESCRIPTION
+    CREATED
+    ALGORITHMS
+    DATASETS
+    DATA_MINING_COMBINER
+}
