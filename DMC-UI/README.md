@@ -29,3 +29,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Running json server
 
 Run `npm run json-server` to start server.
+
+## Specification
+
+[Specification file](https://github.com/dovgevgen/DataMiningCombiner/blob/frontendDevel/DMC-UI/specification.md)
