@@ -19,7 +19,7 @@ This level should contain application configuration files, common styles and mai
 
 This lavel contains folders with feature and folder with modules. Also it's contains constants and folder with shared components/services/directives and ect.
 
-![Application Level](https://github.com/dovgevgen/DataMiningCombiner/blob/frontendDevel/DMC-UI/doc/img/ApplicationLevel.PNG)
+![Application Level](https://github.com/dovgevgen/DataMiningCombiner/blob/frontendDevel/DMC-UI/doc/img/ApplicationLevel.png)
 
 ---
 # 3) Module level
