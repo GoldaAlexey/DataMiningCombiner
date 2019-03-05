@@ -1,4 +1,4 @@
-# DMC
+# DMC-UI
 
 ## Development server
 
