@@ -17,15 +17,15 @@ This level should contain application configuration files, common styles and mai
 ---
 # 2) Application lavel
 
-This lavel contains folders with feature and folder with modules. Also it's contains constants and folder with shared components/services/directives and ect.
+This lavel contains folders with feature and folder with modules. It also contains constants and folder with shared components/services/directives and ect.
 
 ![Application Level](https://github.com/dovgevgen/DataMiningCombiner/blob/frontendDevel/DMC-UI/doc/img/ApplicationLevel.png)
 
 ---
 # 3) Module level
 
-For now application has 2 modules: dmc-common.module and  primeng.module. 
-In dmc-common we should import, configure and export external lib. In primeng module we import and export different external primeng module.
+For now application has 2 modules: **dmc-common.module** and  **primeng.module**. 
+In dmc-common we should import, configure and export external lib. In primeng module we import and export different [external primeng module](https://www.primefaces.org/primeng/#/).
 
 ![Modules](https://github.com/dovgevgen/DataMiningCombiner/blob/frontendDevel/DMC-UI/doc/img/Modules.PNG)
 
