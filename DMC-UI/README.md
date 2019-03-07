@@ -43,3 +43,7 @@ Run `npm run json-server` to start server.
 ## Structure of project
 
 [Structure of project](https://github.com/dovgevgen/DataMiningCombiner/blob/frontendDevel/DMC-UI/doc/structure.md)
+
+## Design requirements
+
+[Figma DMC](https://www.figma.com/file/E63bwbFuXmFoVdboXNVOMaq7/DMC?node-id=39%3A0)
