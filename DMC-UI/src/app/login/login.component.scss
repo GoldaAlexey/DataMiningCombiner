@@ -7,15 +7,44 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    .login-form {
+    .login-form-wrapper {
+        form {
+            height: 100%;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+            .login-title {
+                @include setLatoFont(bold, 18px);
+                text-transform: uppercase;
+                text-align: center;
+            }
+            .field-title {
+                display: block;
+            }
+            .forgot-link {
+                @include setLatoFont(normal, 13px);
+                color: $login-font-color;
+                text-decoration: underline;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            dmc-button {
+                text-align: center;
+                ::ng-deep .ui-button {
+                    width: 140px;
+                    height: 46px;
+                    border-radius: 0;
+                    background-color: $login-button-color;
+                    border: 0;
+                    text-transform: uppercase;
+                    @include setLatoFont(normal, 14px);
+                }
+            }
+        }
         width: 370px;
         height: 336px;
         background: $login-form-background;
         padding: 15px 30px;
-        .login-title {
-            @include setLatoFont(bold, 18px);
-            text-transform: uppercase;
-            text-align: center;
-        }
     }
 }

@@ -9,5 +9,6 @@ export const RU_TRANSLATION: ITranslation = {
     CREATED: 'Создан',
     ALGORITHMS: 'Алгоритмы',
     DATASETS: 'Данные',
-    DATA_MINING_COMBINER: 'Data Mining Combiner'
+    DATA_MINING_COMBINER: 'Data Mining Combiner',
+    FORGOT_PASSWORD: 'Забыл пароль'
 }

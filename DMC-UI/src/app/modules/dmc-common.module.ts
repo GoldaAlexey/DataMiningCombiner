@@ -29,7 +29,8 @@ import { PrimeNgModule } from './primeng.module';
     HttpClientModule,
     FormsModule,
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    DmcButtonComponent
   ]
 })
 export class DMCCommonModule { }

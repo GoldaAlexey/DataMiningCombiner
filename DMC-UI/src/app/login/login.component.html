@@ -1,20 +1,17 @@
 <div class="login-container">
-    <div class="login-form">
+    <div class="login-form-wrapper">
         <form (ngSubmit)="login(form)" #form="ngForm">
-            <div class="ui-g ui-g-nopad">
-                <div class="ui-g-12 ui-g-nopad">
-                    <h1 class="login-title" translate>DATA_MINING_COMBINER</h1>
-                </div>
-                <div class="ui-g-12 ui-g-nopad">
-                    <input pInputText type="email" name="email" [(ngModel)]="credits.email" />
-                </div>
-                <div class="ui-g-12 ui-g-nopad">
-                    <input pInputText type="password" name="password" [(ngModel)]="credits.password" />
-                </div>
-                <div class="ui-g-12 ui-g-nopad">
-                    <button pButton type="submit" label="Click"></button>
-                </div>
+            <h1 class="login-title" translate>DATA_MINING_COMBINER</h1>
+            <div>
+                <span class="field-title" translate>EMAIL</span>
+                <input pInputText type="email" name="email" [(ngModel)]="credits.email" />
             </div>
+            <div>
+                <span class="field-title" translate>PASSWORD</span>
+                <input pInputText type="password" name="password" [(ngModel)]="credits.password" />
+            </div>
+            <a class="forgot-link" href="" translate>FORGOT_PASSWORD</a>
+            <dmc-button type="submit" [label]="'LOGIN' | translate"></dmc-button>
         </form>
     </div>
 </div>
