@@ -27,8 +27,8 @@ import { UserService } from './shared/services/user/user.service';
   ],
   imports: [
     AppRoutingModule,
-    PrimeNgModule,
-    DMCCommonModule
+    DMCCommonModule,
+    PrimeNgModule
   ],
   providers: [
     UserService,

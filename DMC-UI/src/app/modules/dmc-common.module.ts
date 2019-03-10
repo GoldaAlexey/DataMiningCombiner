@@ -7,6 +7,7 @@ import { MissingTranslationHandler, TranslateModule } from '@ngx-translate/core'
 
 import { DmcButtonComponent } from '../shared/components/dmc-button/dmc-button.component';
 import { CustomMissingTranslationHandler } from '../shared/handlers/missing-translation-handler';
+import { PrimeNgModule } from './primeng.module';
 
 @NgModule({
   declarations: [DmcButtonComponent],
@@ -20,7 +21,8 @@ import { CustomMissingTranslationHandler } from '../shared/handlers/missing-tran
     HttpClientModule,
     FormsModule,
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    PrimeNgModule
   ],
   exports: [
     TranslateModule,

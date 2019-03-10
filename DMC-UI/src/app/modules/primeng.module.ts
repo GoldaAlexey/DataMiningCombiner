@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
-import { InputTextModule } from 'primeng/inputtext';
-import { MenubarModule } from 'primeng/menubar';
+import { ButtonModule, InputTextModule, MenubarModule, TooltipModule } from 'primeng/primeng';
 
 @NgModule({
   imports: [
     MenubarModule,
     ButtonModule,
-    InputTextModule
+    InputTextModule,
+    TooltipModule
   ],
   exports: [
     MenubarModule,
     ButtonModule,
-    InputTextModule
+    InputTextModule,
+    TooltipModule
   ]
 })
 export class PrimeNgModule { }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'dmc-button',
@@ -6,10 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dmc-button.component.scss']
 })
 export class DmcButtonComponent implements OnInit {
+  @Input() public label: string;
+  @Input() public icon: string;
+  @Input() public title = '';
+  @Input() public tooltip = '';
+  @Input() public tooltipPosition = 'top';
+  @Input() public type = 'button';
+  @Input() public tooltipStyleClass = '';
+  @Input() public disabled = false;
+
+  // tslint:disable-next-line:no-output-on-prefix
+  @Output() private readonly onClick = new EventEmitter();
 
   constructor() { }
 
-  public ngOnInit(): void {
-  }
+  public ngOnInit(): void { }
 
+  public onClicked(): void {
+    this.onClick.emit();
+  }
 }
