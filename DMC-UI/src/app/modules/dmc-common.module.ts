@@ -6,11 +6,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MissingTranslationHandler, TranslateModule } from '@ngx-translate/core';
 
 import { DmcButtonComponent } from '../shared/components/dmc-button/dmc-button.component';
+import { DmcInputComponent } from '../shared/components/dmc-input/dmc-input.component';
 import { CustomMissingTranslationHandler } from '../shared/handlers/missing-translation-handler';
 import { PrimeNgModule } from './primeng.module';
 
 @NgModule({
-  declarations: [DmcButtonComponent],
+  declarations: [DmcButtonComponent, DmcInputComponent],
   imports: [
     TranslateModule.forRoot({
       missingTranslationHandler: {
@@ -30,7 +31,8 @@ import { PrimeNgModule } from './primeng.module';
     FormsModule,
     BrowserModule,
     BrowserAnimationsModule,
-    DmcButtonComponent
+    DmcButtonComponent,
+    DmcInputComponent
   ]
 })
 export class DMCCommonModule { }

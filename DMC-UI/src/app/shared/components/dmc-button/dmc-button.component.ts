@@ -15,7 +15,6 @@ export class DmcButtonComponent implements OnInit {
   @Input() public tooltipStyleClass = '';
   @Input() public disabled = false;
 
-  // tslint:disable-next-line:no-output-on-prefix
   @Output() private readonly onClick = new EventEmitter();
 
   constructor() { }
