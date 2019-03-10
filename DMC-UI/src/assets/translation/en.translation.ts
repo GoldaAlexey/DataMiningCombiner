@@ -10,5 +10,6 @@ export const EN_TRANSLATION: ITranslation = {
     ALGORITHMS: 'Algorithms',
     DATASETS: 'Datasets',
     DATA_MINING_COMBINER: 'Data Mining Combiner',
-    FORGOT_PASSWORD: 'Forgot password'
+    FORGOT_PASSWORD: 'Forgot password',
+    EMAIL_EXAMPLE: 'example@example.com'
 }

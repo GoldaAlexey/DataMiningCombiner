@@ -11,4 +11,5 @@ interface ITranslation {
     DATASETS
     DATA_MINING_COMBINER
     FORGOT_PASSWORD
+    EMAIL_EXAMPLE
 }

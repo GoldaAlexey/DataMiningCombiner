@@ -5,3 +5,8 @@
     line-height: normal;
     font-size: $font-size;
 }
+
+@mixin setZeroRadiusNoBorder {
+    border: 0;
+    border-radius: 0;
+}

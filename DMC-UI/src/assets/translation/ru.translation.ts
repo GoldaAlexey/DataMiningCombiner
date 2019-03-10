@@ -10,5 +10,6 @@ export const RU_TRANSLATION: ITranslation = {
     ALGORITHMS: 'Алгоритмы',
     DATASETS: 'Данные',
     DATA_MINING_COMBINER: 'Data Mining Combiner',
-    FORGOT_PASSWORD: 'Забыл пароль'
+    FORGOT_PASSWORD: 'Забыл пароль',
+    EMAIL_EXAMPLE: 'example@example.com'
 }

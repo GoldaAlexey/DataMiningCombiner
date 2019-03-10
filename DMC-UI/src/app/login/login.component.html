@@ -10,7 +10,9 @@
                 <dmc-input
                     type="email"
                     name="email"
-                    [(ngModel)]="credits.email"></dmc-input>
+                    [placeholder]="'EMAIL_EXAMPLE' | translate"
+                    [(ngModel)]="credits.email"
+                    ngvemail></dmc-input>
             </div>
             <div>
                 <span class="field-title"
