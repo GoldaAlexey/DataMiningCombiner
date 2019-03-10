@@ -20,6 +20,7 @@
             }
             .field-title {
                 display: block;
+                @include setLatoFont(bold, 14px);
             }
             .forgot-link {
                 @include setLatoFont(normal, 13px);
