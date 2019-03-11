@@ -10,9 +10,10 @@ import { DmcButtonComponent } from '../shared/components/dmc-button/dmc-button.c
 import { DmcInputComponent } from '../shared/components/dmc-input/dmc-input.component';
 import { CustomMissingTranslationHandler } from '../shared/handlers/missing-translation-handler';
 import { PrimeNgModule } from './primeng.module';
+import { ValidationMessageComponent } from '../shared/components/validation-message/validation-message.component';
 
 @NgModule({
-  declarations: [DmcButtonComponent, DmcInputComponent],
+  declarations: [DmcButtonComponent, DmcInputComponent, ValidationMessageComponent],
   imports: [
     TranslateModule.forRoot({
       missingTranslationHandler: {
