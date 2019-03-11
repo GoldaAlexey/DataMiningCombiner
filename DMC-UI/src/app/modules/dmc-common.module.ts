@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MissingTranslationHandler, TranslateModule } from '@ngx-translate/core';
+import { CustomFormsModule } from 'ngx-custom-validators';
 
 import { DmcButtonComponent } from '../shared/components/dmc-button/dmc-button.component';
 import { DmcInputComponent } from '../shared/components/dmc-input/dmc-input.component';
@@ -23,7 +24,8 @@ import { PrimeNgModule } from './primeng.module';
     FormsModule,
     BrowserModule,
     BrowserAnimationsModule,
-    PrimeNgModule
+    PrimeNgModule,
+    CustomFormsModule
   ],
   exports: [
     TranslateModule,
@@ -32,7 +34,8 @@ import { PrimeNgModule } from './primeng.module';
     BrowserModule,
     BrowserAnimationsModule,
     DmcButtonComponent,
-    DmcInputComponent
+    DmcInputComponent,
+    CustomFormsModule
   ]
 })
 export class DMCCommonModule { }
