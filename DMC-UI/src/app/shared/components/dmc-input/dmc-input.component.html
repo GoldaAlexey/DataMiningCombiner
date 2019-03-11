@@ -1,6 +1,7 @@
 <input pInputText
   [name]="name"
   [type]="type"
-  [(ngModel)]="ngModel"
+  [(ngModel)]="model"
   placeholder="{{placeholder}}"
-  [maxlength]="maxTextLength" />
+  [maxlength]="maxTextLength"
+  (blur)="onBlur()" />

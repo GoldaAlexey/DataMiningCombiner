@@ -12,13 +12,13 @@
                     name="email"
                     [placeholder]="'EMAIL_EXAMPLE' | translate"
                     [(ngModel)]="credits.email"
+                    #email="ngModel"
                     ngvemail></dmc-input>
             </div>
             <div>
                 <span class="field-title"
                     translate>PASSWORD</span>
-                <dmc-input
-                    type="password"
+                <dmc-input type="password"
                     name="password"
                     [(ngModel)]="credits.password"></dmc-input>
             </div>
