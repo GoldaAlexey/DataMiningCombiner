@@ -4,25 +4,25 @@
 
 ### Пример Структуры Account DTO
 ```
-> {
->    "accountId":1,
->    "userName":"devel",
->    "email":"devel@mail.org",
->    "firstName":"Devel",
->    "lastName":"Oper",
->    "created":null,
->    "role":"USER",
->    "dtoId":1
->    "_links": {
->       "self": {"href":"http://localhost:8081/rest/user/1"},
->       "getAccount": {"href":"http://localhost:8081/rest/user/1","type":"GET"},
->       "updateAccount": {"href":"http://localhost:8081/rest/user/1","type":"PUT"},
->       "addAccount": { "href":"http://localhost:8081/rest/user","type":"POST"},
->       "deleteAccount":{"href":"http://localhost:8081/rest/user/1","type":"DELETE"},
->       "getAccountList": {"href":"http://localhost:8081/rest/user/all","type":"GET"},
->       "getProjectList":{"href":"http://localhost:8081/rest/1/project/all","type":"GET"}
->    }
-> }
+{
+    "accountId":1,
+    "userName":"devel",
+    "email":"devel@mail.org",
+    "firstName":"Devel",
+    "lastName":"Oper",
+    "created":null,
+    "role":"USER",
+    "dtoId":1
+    "_links": {
+       "self": {"href":"http://localhost:8081/rest/user/1"},
+       "getAccount": {"href":"http://localhost:8081/rest/user/1","type":"GET"},
+       "updateAccount": {"href":"http://localhost:8081/rest/user/1","type":"PUT"},
+       "addAccount": { "href":"http://localhost:8081/rest/user","type":"POST"},
+       "deleteAccount":{"href":"http://localhost:8081/rest/user/1","type":"DELETE"},
+       "getAccountList": {"href":"http://localhost:8081/rest/user/all","type":"GET"},
+       "getProjectList":{"href":"http://localhost:8081/rest/1/project/all","type":"GET"}
+    }
+ }
 ```
 Пример запроса на сервер c целью получения аккаунта с id = 1:
 ```
@@ -34,7 +34,7 @@ http://localhost:8081/rest/user/1
 Далее детально рассмотрим структуру ответа.
 ### Данные об аккаунте
 ```
-accountId":1,
+"accountId":1,
 "userName":"devel",
 "email":"devel@mail.org",
 "firstName":"Devel",
@@ -50,7 +50,15 @@ accountId":1,
 ```
 - На другие запросы связанные с запрашиваемой сущностью
 ```
-"_links":{"self":{"href":"http://localhost:8081/rest/user/1"},"addAccount":{"href":"http://localhost:8081/rest/user","type":"POST"},"getAccount":{"href":"http://localhost:8081/rest/user/1","type":"GET"},"getAccountList":{"href":"http://localhost:8081/rest/user/all","type":"GET"},"updateAccount":{"href":"http://localhost:8081/rest/user","type":"PUT"},"deleteAccount":{"href":"http://localhost:8081/rest/user/1","type":"GET"},"getProjectList":{"href":"http://localhost:8081/rest/1/project/all","type":"GET"}}
+"_links":{
+"self":{"href":"http://localhost:8081/rest/user/1"},
+"addAccount":{"href":"http://localhost:8081/rest/user","type":"POST"},
+"getAccount":{"href":"http://localhost:8081/rest/user/1","type":"GET"},
+"getAccountList":{"href":"http://localhost:8081/rest/user/all","type":"GET"},
+"updateAccount":{"href":"http://localhost:8081/rest/user","type":"PUT"},
+"deleteAccount":{"href":"http://localhost:8081/rest/user/1","type":"GET"},
+"getProjectList":{"href":"http://localhost:8081/rest/1/project/all","type":"GET"}
+}
 ```
 | Имя ссылки | Типо HTTP запроса | Ссылка | Описание | Примечание |
 | ------ | ------ | ------ | ------ | ------ |
@@ -71,7 +79,7 @@ accountId":1,
 
 ### Пример Структуры Project DTO
 ```
-> {
+{
     "projectId":1,
     "projectType":"SIMPLEST_PROJECT"
     ,"name":"proj0",
@@ -98,7 +106,11 @@ http://localhost:8081/rest/1/project/1
 Далее детально рассмотрим структуру ответа.
 ### Данные о проекте
 ```
-"projectId":1,"projectType":"SIMPLEST_PROJECT","name":"proj0","created":"2018-11-18T18:20:31.765+0000","dtoId":1
+"projectId":1,
+"projectType":"SIMPLEST_PROJECT",
+"name":"proj0",
+"created":"2018-11-18T18:20:31.765+0000",
+"dtoId":1
 ```
 ### Ссылки
 - На сам запрос (self link):
