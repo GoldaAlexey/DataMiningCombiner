@@ -34,7 +34,14 @@ http://localhost:8081/rest/user/1
 Далее детально рассмотрим структуру ответа.
 ### Данные об аккаунте
 ```
-accountId":1,"userName":"devel","email":"devel@mail.org","firstName":"Devel","lastName":"Oper","created":null,"role":"USER","dtoId":1
+accountId":1,
+"userName":"devel",
+"email":"devel@mail.org",
+"firstName":"Devel",
+"lastName":"Oper",
+"created":null,
+"role":"USER",
+"dtoId":1
 ```
 ### Ссылки
 - На сам запрос (selfLink):
