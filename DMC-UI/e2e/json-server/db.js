@@ -18,12 +18,12 @@ module.exports = {
                 }
             ],
             "name": "proj0",
-            "projectId": 1
+            "id": 1
         },
         {
             "projectType": "SIMPLEST_PROJECT",
             "created": 1537004850292,
-            "projectId": 2,
+            "id": 2,
             "name": "proj1",
             "links": [
                 {
@@ -58,7 +58,7 @@ module.exports = {
                 }
             ],
             "name": "proj2",
-            "projectId": 3
+            "id": 3
         }
     ],
     users: [
