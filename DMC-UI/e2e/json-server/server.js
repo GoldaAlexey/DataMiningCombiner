@@ -33,7 +33,7 @@ server.post('/login', (req, res, next) => {
         email: 'em@em.com'
     };
 
-    jwt.sign({user}, 'secretKey', (err, token) => {
+    jwt.sign({user}, 'secretKey', { expiresIn: '15h'}, (err, token) => {
         res.jsonp({
             token
         });
