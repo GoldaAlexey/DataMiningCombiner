@@ -61,7 +61,7 @@ function verifyToken(req, res, next) {
     res.sendStatus(403);
 }
 
-server.post('/posts', verifyToken, (req, res) => {
+server.post('/posts', verifyToken, (req, res) => {  
     res.jsonp({
         message: 'Post ...'
     });

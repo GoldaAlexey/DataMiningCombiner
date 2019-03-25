@@ -6,7 +6,7 @@ module.exports = {
             "links": [
                 {
                     "rel": "self",
-                    "href": "/api/1/project/1.json"
+                    "href": "http://localhost:8081/rest/1/project/1"
                 },
                 {
                     "href": "http://localhost:8080/rest/2/project",
@@ -27,7 +27,7 @@ module.exports = {
             "name": "proj1",
             "links": [
                 {
-                    "href": "/api/1/project/2.json",
+                    "href": "http://localhost:8081/rest/1/project/2",
                     "rel": "self"
                 },
                 {
@@ -46,7 +46,7 @@ module.exports = {
             "links": [
                 {
                     "rel": "self",
-                    "href": "/api/1/project/3.json"
+                    "href": "http://localhost:8081/rest/1/project/3"
                 },
                 {
                     "rel": "projectsList",
@@ -131,7 +131,7 @@ module.exports = {
                     "href": "http://localhost:8081/rest/user/all"
                 },
                 "getProjectList": {
-                    "href": "api/1/project/all.json"
+                    "href": "http://localhost:8081/rest/1/project/all"
                 }
             }
         }
