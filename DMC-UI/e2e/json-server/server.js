@@ -33,8 +33,8 @@ server.post('/login', (req, res, next) => {
         const password = req.body['password'];
         if (name) {
             const result = db.users.find(user =>
-                user.userName == name &&
-                user.password == password
+                user.userName === name &&
+                user.password === password
             );
             if (result) {
                 res.jsonp({
@@ -50,7 +50,7 @@ server.post('/login', (req, res, next) => {
 
 function verifyToken(req, res, next) {
     const bearerHeader = req.headers['authorization'];
-    if (typeof bearerHeader !== 'undefined') {
+    if (bearerHeader !== undefined) {
         const bearer = bearerHeader.split(' ');
         const bearerToken = bearer[1];
         if (bearerToken && bearerToken == tokenMock) {
@@ -61,10 +61,61 @@ function verifyToken(req, res, next) {
     res.sendStatus(403);
 }
 
-server.post('/posts', verifyToken, (req, res) => {  
-    res.jsonp({
-        message: 'Post ...'
-    });
+server.get('/:accountId/project/:projectId', verifyToken, (req, res) => {
+    const accountId = Number(req.params.accountId);
+    if (req.params.projectId === 'all') {
+        const projects = db.projects.filter(project =>
+            project.dtoId === accountId
+        );
+        res.jsonp(projects);
+    } else {
+        const projectId = Number(req.params.projectId);
+        const project = db.projects.find(project =>
+            project.dtoId === accountId &&
+            project.projectId === projectId
+        );
+        res.jsonp({ project });
+    }
+});
+
+server.put('/:accountId/project/:projectId', verifyToken, (req, res) => {
+    const newProject = req.body['project'];
+    const accountId = Number(req.params.accountId);
+    const projectId = Number(req.params.projectId);
+    const oldProject = db.projects.find(project =>
+        project.dtoId === accountId &&
+        project.projectId === projectId
+    );
+    if (newProject && oldProject) {
+        res.jsonp({ message: newProject.name + " updated." });
+    } else {
+        res.sendStatus(404);
+    }
+});
+
+server.post('/:accountId/project', verifyToken, (req, res) => {
+    const project = req.body['project'];
+    const accountId = Number(req.params.accountId);
+    const user = db.users.find(user => user.accountId === accountId);
+    if (project && user) {
+        res.jsonp({ message: project.name + " created in the '" + user.userName + "' account." });
+    } else {
+        res.sendStatus(404);
+    }
+});
+
+server.delete('/:accountId/project/:projectId', verifyToken, (req, res) => {
+    const accountId = Number(req.params.accountId);
+    const projectId = Number(req.params.projectId);
+    const project = db.projects.find(project =>
+        project.dtoId === accountId &&
+        project.projectId === projectId
+    );
+    if (project) {
+        res.jsonp({ message: project.name + " deleted." });
+    } else {
+        res.sendStatus(404);
+    }
 });
 
 server.use(router);
