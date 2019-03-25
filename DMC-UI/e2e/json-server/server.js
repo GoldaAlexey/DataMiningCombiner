@@ -27,17 +27,23 @@ server.use(jsonServer.rewriter({
 }));
 
 server.post('/login', (req, res, next) => {
-    const user = {
-        id: 1,
-        username: 'Name',
-        email: 'em@em.com'
-    };
-
-    jwt.sign({user}, 'secretKey', { expiresIn: '15h'}, (err, token) => {
-        res.jsonp({
-            token
-        });
-    });
+    if (req.method === 'POST') {
+        let name = req.body['name'];
+        if (name) {
+            let result = db.users.find(user => {
+                return user.userName = name;
+            });
+            res.jsonp({
+                result
+            });
+        } else {
+            res.jsonp({
+                post: 'post'
+            });
+        }
+    }
+    //jwt.sign({user}, 'secretKey', { expiresIn: '15h'}, (err, token) => {
+    //});
 });
 
 server.post('/posts', verifyToken, (req, res) => {
@@ -50,9 +56,6 @@ server.post('/posts', verifyToken, (req, res) => {
                 authData
             });
         }
-    });
-    res.jsonp({
-        message: 'Post ...'
     });
 });
 
