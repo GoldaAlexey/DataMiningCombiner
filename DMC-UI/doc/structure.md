@@ -57,3 +57,7 @@ Features contains from:
     A **data service** is a **service** that can be used to provide **data to different(No data) service**. This service works with API or Storages for getting data. Data services contains in **shared/services/data-services** folder.
     
     ![Data Services](https://github.com/dovgevgen/DataMiningCombiner/blob/frontendDevel/DMC-UI/doc/img/DataServices.PNG)
+    
+# 5) Architecture diagram
+![Architecture](https://github.com/dovgevgen/DataMiningCombiner/blob/frontendDevel/DMC-UI/doc/img/Architecture.PNG)
+
