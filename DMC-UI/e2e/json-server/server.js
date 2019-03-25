@@ -1,6 +1,7 @@
 const jsonServer = require('json-server');
 const cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
+const tokenMock = 'tokenKey';
 const db = require('./db.js');
 
 const server = jsonServer.create();
@@ -28,19 +29,17 @@ server.use(jsonServer.rewriter({
 
 server.post('/login', (req, res, next) => {
     if (req.method === 'POST') {
-        let name = req.body['name'];
-        let password = req.body['password'];
+        const name = req.body['name'];
+        const password = req.body['password'];
         if (name) {
-            let result = db.users.find(user =>
+            const result = db.users.find(user =>
                 user.userName == name &&
                 user.password == password
             );
             if (result) {
-                jwt.sign(result, 'secretKey', { expiresIn: '15h' }, (err, token) => {
-                    res.jsonp({
-                        result,
-                        token
-                    });
+                res.jsonp({
+                    ...result,
+                    tokenMock
                 });
             }
         }
@@ -49,31 +48,24 @@ server.post('/login', (req, res, next) => {
     }
 });
 
-server.post('/posts', verifyToken, (req, res) => {
-    jwt.verify(req.token, 'secretKey', (err, authData) => {
-        if (err) {
-            res.sendStatus(403);
-        } else {
-            res.jsonp({
-                message: 'Post ...',
-                authData
-            });
-        }
-    });
-});
-
-// Verify Token
 function verifyToken(req, res, next) {
     const bearerHeader = req.headers['authorization'];
     if (typeof bearerHeader !== 'undefined') {
         const bearer = bearerHeader.split(' ');
         const bearerToken = bearer[1];
-        req.token = bearerToken;
-        next();
-    } else {
-        res.sendStatus(403);
+        if (bearerToken && bearerToken == tokenMock) {
+            next();
+        }
     }
+
+    res.sendStatus(403);
 }
+
+server.post('/posts', verifyToken, (req, res) => {
+    res.jsonp({
+        message: 'Post ...'
+    });
+});
 
 server.use(router);
 
