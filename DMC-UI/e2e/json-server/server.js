@@ -29,21 +29,24 @@ server.use(jsonServer.rewriter({
 server.post('/login', (req, res, next) => {
     if (req.method === 'POST') {
         let name = req.body['name'];
+        let password = req.body['password'];
         if (name) {
-            let result = db.users.find(user => {
-                return user.userName = name;
-            });
-            res.jsonp({
-                result
-            });
-        } else {
-            res.jsonp({
-                post: 'post'
-            });
+            let result = db.users.find(user =>
+                user.userName == name &&
+                user.password == password
+            );
+            if (result) {
+                jwt.sign(result, 'secretKey', { expiresIn: '15h' }, (err, token) => {
+                    res.jsonp({
+                        result,
+                        token
+                    });
+                });
+            }
         }
+
+        res.sendStatus(404);
     }
-    //jwt.sign({user}, 'secretKey', { expiresIn: '15h'}, (err, token) => {
-    //});
 });
 
 server.post('/posts', verifyToken, (req, res) => {
