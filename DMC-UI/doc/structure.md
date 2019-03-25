@@ -59,5 +59,5 @@ Features contains from:
     ![Data Services](https://github.com/dovgevgen/DataMiningCombiner/blob/frontendDevel/DMC-UI/doc/img/DataServices.PNG)
     
 # 5) Architecture diagram
-![Architecture](https://github.com/dovgevgen/DataMiningCombiner/blob/frontendDevel/DMC-UI/doc/img/Architecture.PNG)
+![Architecture](https://github.com/dovgevgen/DataMiningCombiner/blob/frontendDevel/DMC-UI/doc/img/Architecture.png)
 
