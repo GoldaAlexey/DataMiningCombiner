@@ -19,13 +19,14 @@ module.exports = {
             ],
             "name": "proj0",
             "projectId": 1,
-            "dtoId": 1
+            "dtoId": 1,
+            "mockUserId": 1
         },
         {
             "projectType": "SIMPLEST_PROJECT",
             "created": 1537004850292,
             "projectId": 2,
-            "dtoId": 1,
+            "dtoId": 2,
             "name": "proj1",
             "links": [
                 {
@@ -40,7 +41,8 @@ module.exports = {
                     "href": "http://localhost:8080/rest/2/project/2/dataset",
                     "rel": "datasetsList"
                 }
-            ]
+            ],
+            "mockUserId": 2
         },
         {
             "created": 1537004850292,
@@ -61,7 +63,8 @@ module.exports = {
             ],
             "name": "proj2",
             "projectId": 3,
-            "dtoId": 3
+            "dtoId": 3,
+            "mockUserId": 2
         }
     ],
     users: [
@@ -145,31 +148,31 @@ module.exports = {
             "name": "telecom",
             "description": "",
             "attributes": {
-                "Total intl minutes": {
+                "TotalIntlMinutes": {
                     "name": "Total intl minutes",
                     "type": "NUMERIC",
                     "multiplier": 1.0,
                     "checked": true
                 },
-                "Total day charge": {
+                "TotalDayCharge": {
                     "name": "Total day charge",
                     "type": "NUMERIC",
                     "multiplier": 1.0,
                     "checked": true
                 },
-                "Total day calls": {
+                "TotalDayCalls": {
                     "name": "Total day calls",
                     "type": "NUMERIC",
                     "multiplier": 1.0,
                     "checked": true
                 },
-                "Number vmail messages": {
+                "NumberVmailMessages": {
                     "name": "Number vmail messages",
                     "type": "NUMERIC",
                     "multiplier": 1.0,
                     "checked": true
                 },
-                "Total night charge": {
+                "TotalNightCharge": {
                     "name": "Total night charge",
                     "type": "NUMERIC",
                     "multiplier": 1.0,
@@ -181,49 +184,49 @@ module.exports = {
                     "multiplier": 1.0,
                     "checked": true
                 },
-                "Total night minutes": {
+                "TotalNightMinutes": {
                     "name": "Total night minutes",
                     "type": "NUMERIC",
                     "multiplier": 1.0,
                     "checked": true
                 },
-                "Total eve calls": {
+                "TotalEveCalls": {
                     "name": "Total eve calls",
                     "type": "NUMERIC",
                     "multiplier": 1.0,
                     "checked": true
                 },
-                "Total day minutes": {
+                "TotalDayMinutes": {
                     "name": "Total day minutes",
                     "type": "NUMERIC",
                     "multiplier": 1.0,
                     "checked": true
                 },
-                "Customer service calls": {
+                "CustomerServiceCalls": {
                     "name": "Customer service calls",
                     "type": "NUMERIC",
                     "multiplier": 1.0,
                     "checked": true
                 },
-                "Total intl charge": {
+                "TotalIntlCharge": {
                     "name": "Total intl charge",
                     "type": "NUMERIC",
                     "multiplier": 1.0,
                     "checked": true
                 },
-                "Area code": {
+                "AreaCode": {
                     "name": "Area code",
                     "type": "NUMERIC",
                     "multiplier": 1.0,
                     "checked": true
                 },
-                "Total night calls": {
+                "TotalNightCalls": {
                     "name": "Total night calls",
                     "type": "NUMERIC",
                     "multiplier": 1.0,
                     "checked": true
                 },
-                "International plan": {
+                "InternationalPlan": {
                     "name": "International plan",
                     "type": "NOMINAL",
                     "multiplier": 1.0,
@@ -235,31 +238,31 @@ module.exports = {
                     "multiplier": 1.0,
                     "checked": true
                 },
-                "Account length": {
+                "AccountLength": {
                     "name": "Account length",
                     "type": "NUMERIC",
                     "multiplier": 1.0,
                     "checked": true
                 },
-                "Total intl calls": {
+                "TotalIntlCalls": {
                     "name": "Total intl calls",
                     "type": "NUMERIC",
                     "multiplier": 1.0,
                     "checked": true
                 },
-                "Total eve minutes": {
+                "TotalEveMinutes": {
                     "name": "Total eve minutes",
                     "type": "NUMERIC",
                     "multiplier": 1.0,
                     "checked": true
                 },
-                "Total eve charge": {
+                "TotalEveCharge": {
                     "name": "Total eve charge",
                     "type": "NUMERIC",
                     "multiplier": 1.0,
                     "checked": true
                 },
-                "Voice mail plan": {
+                "VoiceMailPlan": {
                     "name": "Voice mail plan",
                     "type": "NOMINAL",
                     "multiplier": 1.0,
@@ -267,6 +270,8 @@ module.exports = {
                 }
             },
             "dtoId": 1,
+            "mockUserId": 1,
+            "mockProjectId": 1,
             "_links": {
                 "self": {
                     "href": "http://localhost:8081/rest/1/project/1/dataset/1"
