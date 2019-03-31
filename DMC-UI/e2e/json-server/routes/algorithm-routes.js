@@ -42,18 +42,18 @@ module.exports = {
             }
         });
 
-        // ADD A NEW DATASET
-        server.post('/:accountId/project/:projectId/dataset', verifyToken.verify, (req, res) => {
-            const dataset = req.body['dataset'];
+        // ADD A NEW ALGORITHM
+        server.post('/:accountId/project/:projectId/algorithm', verifyToken.verify, (req, res) => {
+            const algorithm = req.body['algorithm'];
             const accountId = Number(req.params.accountId);
             const projectId = Number(req.params.projectId);
             const user = db.users.find(user => user.accountId === accountId);
             const project = db.projects.find(project =>
                 project.mockUserId === accountId &&
                 project.projectId === projectId);
-            if (user && project && dataset) {
+            if (user && project && algorithm) {
                 res.jsonp({
-                    message: dataset.name + " created in the project '" + project.name
+                    message: algorithm.name + " created in the project '" + project.name
                         + "' in the '" + user.userName + "' account."
                 });
             } else {
@@ -61,18 +61,18 @@ module.exports = {
             }
         });
 
-        // DELETE A DATASET
-        server.delete('/:accountId/project/:projectId/dataset/:datasetId', verifyToken.verify, (req, res) => {
+        // DELETE A ALGORITHM
+        server.delete('/:accountId/project/:projectId/algorithm/:algorithmId', verifyToken.verify, (req, res) => {
             const accountId = Number(req.params.accountId);
             const projectId = Number(req.params.projectId);
-            const datasetId = Number(req.params.datasetId);
-            const dataset = db.datasets.find(dataset =>
-                dataset.mockUserId === accountId &&
-                dataset.mockProjectId === projectId &&
-                dataset.metaDataId === datasetId
+            const algorithmId = Number(req.params.algorithmId);
+            const algorithm = db.algorithms.find(algorithm =>
+                algorithm.mockUserId === accountId &&
+                algorithm.mockProjectId === projectId &&
+                algorithm.algorithmId === algorithmId
             );
-            if (dataset) {
-                res.jsonp({ message: dataset.name + " deleted." });
+            if (algorithm) {
+                res.jsonp({ message: algorithm.name + " deleted." });
             } else {
                 res.sendStatus(404);
             }
