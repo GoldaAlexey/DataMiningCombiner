@@ -297,6 +297,8 @@ module.exports = {
     algorithms: [
         {
             "algorithmId": 1,
+            "mockUserId": 1,
+            "mockProjectId": 1,
             "name": "Algorithm 1",
             "description": null,
             "project": null,
