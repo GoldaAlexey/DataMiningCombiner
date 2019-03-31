@@ -5,9 +5,11 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { EN_TRANSLATION } from '../../../../assets/translation/en.translation';
 import { RU_TRANSLATION } from '../../../../assets/translation/ru.translation';
 import { LANGUAGE } from '../../constants/translation';
-import { TranslationDataService } from '../data-services/translation-data/translation-data.service';
+import { TranslationDataService } from './translation-data.service';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class TranslationService {
 
     private readonly subject = new BehaviorSubject<any>(null);
