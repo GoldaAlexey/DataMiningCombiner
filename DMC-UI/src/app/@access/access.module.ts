@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { LoginComponent } from './login/login.component';
-import { LoginDataService } from './login/login-data.service';
 import { SharedModule } from '../@shared/shared.module';
 import { AccessRoutingModule } from './access.routing';
 
@@ -11,9 +10,6 @@ import { AccessRoutingModule } from './access.routing';
   imports: [
     SharedModule,
     AccessRoutingModule
-  ],
-  providers: [
-    LoginDataService
   ]
 })
 export class AccessModule { }

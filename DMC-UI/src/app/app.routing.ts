@@ -6,6 +6,9 @@ const routes: Routes = [
   {
     path: '',
     component: LayoutComponent
+  }, {
+    path: 'login',
+    loadChildren: './@access/access.module#AccessModule',
   }
 ];
 
