@@ -1,8 +1,0 @@
-@import "../../../mixins.scss";
-@import "../../../variables.scss";
-
-.validation-message-text {
-    margin: 0;
-    color: $invalid-text-color;
-    @include setLatoFont(bold, 12px);
-}
