@@ -1,4 +1,4 @@
-export interface ICredits {
-    email: string;
+export interface Credits {
+    username: string;
     password: string;
 }
