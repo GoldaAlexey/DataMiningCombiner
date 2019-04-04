@@ -6,21 +6,23 @@
                 translate>DATA_MINING_COMBINER</h1>
             <div>
                 <span class="field-title"
-                    translate>EMAIL</span>
-                <dmc-input
-                    type="email"
-                    name="email"
-                    [placeholder]="'EMAIL_EXAMPLE' | translate"
-                    [(ngModel)]="credits.email"
-                    #email="ngModel"
-                    ngvemail></dmc-input>
+                    [class.invalid]="username.invalid && username.touched"
+                    translate>USERNAME</span>
+                <dmc-input type="text"
+                    name="username"
+                    [(ngModel)]="credits.username"
+                    #username="ngModel"
+                    required></dmc-input>
             </div>
             <div>
                 <span class="field-title"
+                    [class.invalid]="password.invalid && password.touched"
                     translate>PASSWORD</span>
                 <dmc-input type="password"
                     name="password"
-                    [(ngModel)]="credits.password"></dmc-input>
+                    [(ngModel)]="credits.password"
+                    #password="ngModel"
+                    required></dmc-input>
             </div>
             <a class="forgot-link"
                 href=""

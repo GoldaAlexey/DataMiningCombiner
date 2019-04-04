@@ -31,7 +31,7 @@ server.use(jsonServer.rewriter({
 
 server.post('/login', (req, res, next) => {
     if (req.method === 'POST') {
-        const name = req.body['name'];
+        const name = req.body['username'];
         const password = req.body['password'];
         if (name) {
             const result = db.users.find(user =>

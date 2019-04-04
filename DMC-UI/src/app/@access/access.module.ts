@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
-import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+
 import { SharedModule } from '../@shared/shared.module';
 import { AccessRoutingModule } from './access.routing';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -9,6 +11,7 @@ import { AccessRoutingModule } from './access.routing';
   ],
   imports: [
     SharedModule,
+    FormsModule,
     AccessRoutingModule
   ]
 })

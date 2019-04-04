@@ -10,4 +10,9 @@ export class UserService {
   constructor(private readonly userDataService: UserDataService) {
     this.user = this.userDataService.getUserFromStorage();
   }
+
+  public saveUserData(user: User): void {
+    this.user = user;
+    this.userDataService.saveUserInStorage(user);
+  }
 }

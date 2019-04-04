@@ -7,9 +7,7 @@ import { RU_TRANSLATION } from '../../../../assets/translation/ru.translation';
 import { LANGUAGE } from '../../constants/translation';
 import { TranslationDataService } from './translation-data.service';
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 export class TranslationService {
 
     private readonly subject = new BehaviorSubject<any>(null);

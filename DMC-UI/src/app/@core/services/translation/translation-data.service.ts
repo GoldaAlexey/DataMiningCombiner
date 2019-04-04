@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { LANGUAGE_STORAGE_KEY } from '../../constants/translation';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class TranslationDataService {
 
   constructor() { }
