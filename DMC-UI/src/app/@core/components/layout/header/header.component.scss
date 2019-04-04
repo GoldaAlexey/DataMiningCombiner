@@ -1,0 +1,25 @@
+@import "../../../../mixins.scss";
+@import "../../../../variables.scss";
+
+.header-wrapper {
+    height: 60px;
+    background-color: $header-background-color;
+
+    .header-container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .header-item {
+            @include setLatoFont(normal, 18px);
+            text-transform: uppercase;
+            color: $header-item-text-color;
+            cursor: pointer;
+        }
+
+        .header-item:hover {
+            text-decoration: none;
+        }
+    }
+}

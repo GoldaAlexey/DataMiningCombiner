@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NgControl } from '@angular/forms';
 
 @Component({
   selector: 'validation-message',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ValidationMessageComponent implements OnInit {
 
+  @Input() public formElement: NgControl;
+
   constructor() { }
 
-  public ngOnInit(): void {
-  }
+  public ngOnInit(): void { }
 
 }

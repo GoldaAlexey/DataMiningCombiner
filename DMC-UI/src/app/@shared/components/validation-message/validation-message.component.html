@@ -1,3 +1,4 @@
-<p>
-  validation-message works!
-</p>
+<div *ngIf="formElement.touched">
+  <p class="validation-message-text" *ngIf="formElement.errors?.email"
+    translate>INVALID_EMAIL</p>
+</div>

@@ -1,5 +1,5 @@
 export const EN_TRANSLATION: ITranslation = {
-    EMAIL: 'Email',
+    USERNAME: 'Username',
     PASSWORD: 'Password',
     LOGIN: 'Login',
     PROJECTS: 'Projects',
@@ -11,5 +11,5 @@ export const EN_TRANSLATION: ITranslation = {
     DATASETS: 'Datasets',
     DATA_MINING_COMBINER: 'Data Mining Combiner',
     FORGOT_PASSWORD: 'Forgot password',
-    EMAIL_EXAMPLE: 'example@example.com'
+    INVALID_EMAIL: 'Invalid email'
 }
