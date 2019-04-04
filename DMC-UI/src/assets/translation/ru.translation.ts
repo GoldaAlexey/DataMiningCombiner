@@ -1,5 +1,5 @@
 export const RU_TRANSLATION: ITranslation = {
-    EMAIL: 'Почта',
+    USERNAME: 'Имя',
     PASSWORD: 'Пароль',
     LOGIN: 'Войти',
     PROJECTS: 'Проекты',
@@ -11,5 +11,5 @@ export const RU_TRANSLATION: ITranslation = {
     DATASETS: 'Данные',
     DATA_MINING_COMBINER: 'Data Mining Combiner',
     FORGOT_PASSWORD: 'Забыл пароль',
-    EMAIL_EXAMPLE: 'example@example.com'
+    INVALID_EMAIL: 'Некорректный email'
 }
