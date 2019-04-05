@@ -13,11 +13,15 @@ import { TranslationDataService } from './services/translation/translation-data.
 import { TranslationService } from './services/translation/translation.service';
 import { UserDataService } from './services/user/user-data.service';
 import { UserService } from './services/user/user.service';
+import { LanguageSwitcherComponent } from './components/layout/header/language-switcher/language-switcher.component';
+import { UserMenuComponent } from './components/layout/header/user-menu/user-menu.component';
 
 @NgModule({
   declarations: [
     LayoutComponent,
-    HeaderComponent
+    HeaderComponent,
+    LanguageSwitcherComponent,
+    UserMenuComponent
   ],
   imports: [
     RouterModule,

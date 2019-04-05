@@ -4,6 +4,7 @@ const constants = require('./constants');
 const db = require('./db');
 const projectRoutes = require('./routes/project-routes');
 const datasetRoutes = require('./routes/dataset-routes');
+const algorithmRoutes = require('./routes/algorithm-routes');
 //const jwt = require('jsonwebtoken');
 
 const server = jsonServer.create();
@@ -53,6 +54,8 @@ server.post('/login', (req, res, next) => {
 projectRoutes.create(server);
 
 datasetRoutes.create(server);
+
+algorithmRoutes.create(server);
 
 server.use(router);
 
