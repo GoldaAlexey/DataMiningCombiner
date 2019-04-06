@@ -1,12 +1,14 @@
-<p-dropdown class="dropdown" [options]="languages" [(ngModel)]="selectedlanguage" optionLabel="secondName" (ngModelChange)="languageChange()"  translate>
-    <ng-template let-item pTemplate="selectedItem" style="width:120px;">
-        <img src="../../../../../../assets/images/{{item.label}}.png" style="width:16px;vertical-align:middle" />
-        <span style="vertical-align:middle; margin-left: .5em" translate>{{item.label}}</span>
+<p-dropdown class="dropdown" [options]="getLanguages()" [(ngModel)]="selectedlanguage.value" 
+            optionLabel="value" (ngModelChange)="languageChange()"
+            >   
+    <ng-template let-item pTemplate="selectedItem">
+        <img src="../../../../../../assets/images/{{item.label}}.png" />
+        <span translate>{{item.label}}</span>
     </ng-template>
-    <ng-template let-car pTemplate="item">
-        <div class="ui-helper-clearfix selectDiv" style="position: relative;height: 25px; width:120px">
-            <img src="../../../../../../assets/images/{{car.label}}.png" style="width:24px; "/>
-            <div style="font-size:14px;float:right; text-align: start" translate>{{car.label}}</div>
+    <ng-template let-items pTemplate="item">
+        <div class="ui-helper-clearfix d-flex">
+            <img src="../../../../../../assets/images/{{items.label}}.png" />
+            <div translate>{{items.label}}</div>
         </div>
     </ng-template>
 </p-dropdown>

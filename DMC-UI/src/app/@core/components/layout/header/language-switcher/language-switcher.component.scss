@@ -4,12 +4,16 @@
 
 .dropdown{
     ::ng-deep .ui-helper-clearfix{
-        width: 150px!important;
+        width: 140px!important;
+        padding: 0;
     }
     ::ng-deep .selectDiv{
         display: inline;
         text-align: start;
         justify-content: start;
+    }
+    img{
+        margin-right: 10px;
     }
 }
 

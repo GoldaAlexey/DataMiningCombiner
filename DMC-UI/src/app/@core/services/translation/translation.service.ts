@@ -43,4 +43,7 @@ export class TranslationService {
     public getCurrentLanguage(): string {
         return this.translate.currentLang;
     }
+    public getListOfLanguages(): string[]{
+        return this.translate.getLangs();
+    }
 }
