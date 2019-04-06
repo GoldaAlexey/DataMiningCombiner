@@ -12,4 +12,7 @@ interface ITranslation {
     DATA_MINING_COMBINER
     FORGOT_PASSWORD
     INVALID_EMAIL
+    SIGN_OUT
+    English
+    Russian
 }

@@ -1,0 +1,17 @@
+@import "../../../../../mixins.scss";
+@import "../../../../../variables.scss";
+
+
+.dropdown{
+    ::ng-deep .ui-helper-clearfix{
+        width: 150px!important;
+    }
+    ::ng-deep .selectDiv{
+        display: inline;
+        text-align: start;
+        justify-content: start;
+    }
+}
+
+
+

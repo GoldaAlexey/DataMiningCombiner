@@ -2,6 +2,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MissingTranslationHandler, TranslateModule } from '@ngx-translate/core';
+import { FormsModule } from '@angular/forms';
 
 import { HeaderComponent } from './components/layout/header/header.component';
 import { LayoutComponent } from './components/layout/layout.component';
@@ -15,6 +16,7 @@ import { UserDataService } from './services/user/user-data.service';
 import { UserService } from './services/user/user.service';
 import { LanguageSwitcherComponent } from './components/layout/header/language-switcher/language-switcher.component';
 import { UserMenuComponent } from './components/layout/header/user-menu/user-menu.component';
+import { DropdownModule } from '../../../node_modules/primeng/components/dropdown/dropdown';
 
 @NgModule({
   declarations: [
@@ -29,8 +31,10 @@ import { UserMenuComponent } from './components/layout/header/user-menu/user-men
       missingTranslationHandler: {
         provide: MissingTranslationHandler,
         useClass: CustomMissingTranslationHandler
-      }
-    })
+      },
+    }),
+    DropdownModule,
+    FormsModule,
   ],
   exports: [
     TranslateModule,
